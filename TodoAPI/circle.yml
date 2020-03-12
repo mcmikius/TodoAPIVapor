@@ -3,7 +3,7 @@ version: 2
 jobs:
   macos:
     macos:
-      xcode: "9.0"
+      xcode: "11.3.1"
     steps:
       - checkout
       - run: swift build
@@ -11,7 +11,7 @@ jobs:
 
   linux:
     docker:
-      - image: swift:4.0
+      - image: swift:5.1
     steps:
       - run: apt-get install -y libssl-dev
       - checkout
