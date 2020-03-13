@@ -16,7 +16,7 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     }
     
     // register custom service types here
-    
+    services.register(SecretMiddleware.self)
     services.register(LogMiddleware.self)
     
     /// Setup a simple in-memory SQLite database
